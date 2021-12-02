@@ -40,6 +40,7 @@ btnCancelar.addEventListener('click', () => {                                   
 
 console.log(word);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 btnCalcular.addEventListener('click', () => {
    let letra = document.querySelector('#inpEntrada').value.toLowerCase();
@@ -74,20 +75,23 @@ function SoloLetras(e) {                                                        
       return false;
    }
 }
+=======
+>>>>>>> a3adabe (Vuelta a commit andres)
 
 btnCalcular.addEventListener('click', () => {
-   let letra = document.querySelector('#inpEntrada').value.toLowerCase();  //convertir la letra ingresada a minuscula
-   if (letra != '') {
-      document.querySelector('#inpEntrada').value = '';                    // dejar nuevamente el imput vacio
-      document.querySelector('#inpEntrada').focus();                       // dejar el selector dentor del imput
-      let aux = false;
-      for (let i = 0; i < word.length; i++) {                               
-         if (word.charAt(i) == letra) {
-            document.getElementById('p' + i).innerHTML = letra;            //escirbir la letra sobre el <p> si se acierta
-            puntajeGanar++;
-            aux = true;
-         }
+   let letra = document.querySelector('#inpEntrada').value.toLowerCase();
+   alert(letra);
+   
+   document.querySelector('#inpEntrada').value = "";
+   document.querySelector('#inpEntrada').focus();
+   let aux = false;
+   for (let i = 0; i < word.length; i++) {
+      if (word.charAt(i) == letra) {
+         document.getElementById('p' + i).innerHTML = letra;
+         puntajeGanar++;
+         aux = true;
       }
+<<<<<<< HEAD
 
       if (puntajeGanar == word.length) {                                   //contador para ganar el juego
          alert('Ha ganado el juego');
@@ -108,6 +112,8 @@ btnCalcular.addEventListener('click', () => {
    } else {
       alert('Espacio vacio, por favor digite una letra');                    //validacion caracter null
 >>>>>>> 26fe8b0d372b77e8a62f00e04c32afd0032148d6
+=======
+>>>>>>> a3adabe (Vuelta a commit andres)
    }
 
    if (puntajeGanar == word.length) {
