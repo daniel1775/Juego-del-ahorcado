@@ -1,4 +1,4 @@
-const secretWord = [
+const secretWord = [    //array con las palabras secretas
    'programacion',
    'desarrollo',
    'maquetacion',
@@ -7,15 +7,15 @@ const secretWord = [
    'frontend',
    'backend',
 ];
-let word = secretWord[Math.floor(Math.random() * secretWord.length)];
+let word = secretWord[Math.floor(Math.random() * secretWord.length)];   //elegir palabra al azar
 let state = document.querySelector('.state');
 let btnCalcular = document.querySelector('#btnEnviar');
-let btnCancelar = document.querySelector('#btnRecargar');
-let images = document.querySelectorAll('img.draw__imagen');
+let btnCancelar = document.querySelector('#btnRecargar'); 
+let images = document.querySelectorAll('img.draw__imagen');   
 let puntajeGanar = 0;
 let opportunities = 0;
 
-const generar = () => {
+const generar = () => {                              //generar los <p> donde ira la plabara en el html
    state.innerHTML = '';
    for (let i = 0; i < word.length; i++) {
       let p = document.createElement('p');
@@ -26,7 +26,7 @@ const generar = () => {
 
 generar();
 
-btnCancelar.addEventListener('click', () => {
+btnCancelar.addEventListener('click', () => {                                      //validar  con el botton el ingreso de caracteres dentro del imput
    word = secretWord[Math.floor(Math.random() * secretWord.length)];
    btnCalcular.disabled = false;
    generar();
@@ -39,7 +39,7 @@ btnCancelar.addEventListener('click', () => {
 });
 
 console.log(word);
-function SoloLetras(e) {
+function SoloLetras(e) {                                                           //funcion para velidar que solo se reciban letras en el imput 
    key = e.keyCode || e.which;
    tecla = String.fromCharCode(key).toString();
    letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZÁÉÍÓÚabcdefghijklmnopqrstuvwxyzáéíóú';
@@ -60,20 +60,20 @@ function SoloLetras(e) {
 }
 
 btnCalcular.addEventListener('click', () => {
-   let letra = document.querySelector('#inpEntrada').value.toLowerCase();
+   let letra = document.querySelector('#inpEntrada').value.toLowerCase();  //convertir la letra ingresada a minuscula
    if (letra != '') {
-      document.querySelector('#inpEntrada').value = '';
-      document.querySelector('#inpEntrada').focus();
+      document.querySelector('#inpEntrada').value = '';                    // dejar nuevamente el imput vacio
+      document.querySelector('#inpEntrada').focus();                       // dejar el selector dentor del imput
       let aux = false;
-      for (let i = 0; i < word.length; i++) {
+      for (let i = 0; i < word.length; i++) {                               
          if (word.charAt(i) == letra) {
-            document.getElementById('p' + i).innerHTML = letra;
+            document.getElementById('p' + i).innerHTML = letra;            //escirbir la letra sobre el <p> si se acierta
             puntajeGanar++;
             aux = true;
          }
       }
 
-      if (puntajeGanar == word.length) {
+      if (puntajeGanar == word.length) {                                   //contador para ganar el juego
          alert('Ha ganado el juego');
       } else if (aux == false) {
          images[opportunities].style.display = 'none';
@@ -82,14 +82,14 @@ btnCalcular.addEventListener('click', () => {
          }
          opportunities++;
       }
-
-      if (opportunities == 6) {
+ 
+      if (opportunities == 6) {                                             //contador para ganar el juego
          alert('Has perdidio el juego');
          opportunities = 0;
          puntajeGanar = 0;
          btnCalcular.disabled = true;
       }
    } else {
-      alert('Espacio vacio, por favor digite una letra');
+      alert('Espacio vacio, por favor digite una letra');                    //validacion caracter null
    }
 });
