@@ -1,37 +1,38 @@
-* {
-   margin: 0;
-   padding: 0;
+*{
+  margin: 0;
+  padding: 0;
 }
-.state {
+.state{
    display: flex;
    justify-content: space-evenly;
 }
 
-.title {
-   grid-column: 2/4;
-   grid-row: 1/2;
+.title{
+  grid-column: 2/4;
+  grid-row: 1/2;
 }
 
-h1 {
-   color: white;
-   font-family: 'Righteous', cursive;
-   text-align: center;
+h1{
+  color: white;
+  font-family: 'Righteous', cursive;
+  text-align: center;
+  
 }
 
-#btnRecargar {
-   color: white;
-   cursor: pointer;
+#btnRecargar{
+  color: white;
+  cursor: pointer;
 }
 
-.draw__imagen {
+.draw__imagen{
    display: none;
 }
 
-.draw__imagen--1 {
+.draw__imagen--1{
    display: inline-block;
 }
 
-p {
+p{
    font-size: 4vw;
    padding-bottom: 10px;
    border-bottom: 2px solid white;
@@ -42,111 +43,134 @@ p {
    font-family: 'Righteous', cursive;
 }
 
-.main-container {
-   background-color: #080708;
-   width: 100vw;
-   height: 100vh;
-   display: grid;
-   grid-template-columns: repeat(4, 1fr);
-   grid-gap: 8px;
-   grid-template-rows: repeat(5, 1fr);
+.main-container{
+  background-color: #080708;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 8px;
+  grid-template-rows: repeat(5,1fr);
+  
 }
 
-.draw {
-   grid-column: 1/5;
-   grid-row: 2/5;
-   align-content: center;
-   display: flex;
-   justify-content: center;
+.draw{
+  grid-column: 1/5;
+  grid-row: 2/5;
+  align-content: center;
+  display: flex;
+  justify-content: center;
 }
 
-.draw__imagen {
-   width: 80%;
-   height: 100%;
+.draw__imagen{
+  width: 80%;
+  height: 100%;
+  
 }
 
-.state {
-   grid-column: 2/4;
-   grid-row: 1/2;
+.state{
+  grid-column: 2/4;
+  grid-row: 1/2;
+  
 }
 
-.data {
-   grid-row: 5/6;
-   grid-column: 2/4;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-evenly;
+.data{
+  grid-row: 5/6;
+  grid-column: 2/4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
-.nav {
-   grid-column-start: 4;
-   display: flex;
-   justify-content: flex-end;
-   margin: 8px;
+.nav{
+  grid-column-start: 4;
+  display: flex;
+  justify-content: flex-end;
+  margin: 8px;
 }
 
-#inpEntrada {
-   background-color: transparent;
-   border-color: transparent;
-   border-bottom-color: #d5f2f2;
-   border-bottom-width: 5px;
-   width: 80%;
-   align-self: center;
-   color: #ffffff;
+#inpEntrada{
+  background-color: transparent;
+  border-color: transparent;
+  border-bottom-color: #D5F2F2;
+  border-bottom-width: 5px;
+  width: 80%;
+  align-self: center;
+  color: #FFFFFF;
 }
 
-#btnEnviar {
-   background: linear-gradient(180deg, #f22797 0%, #2e62a6 100%);
-   border-radius: 10vw;
-   border-style: none;
-   width: 50%;
-   align-self: center;
-   height: 5vh;
-   font-family: 'Righteous', cursive;
-   color: #ffffff;
-   font-size: 3.5vw;
+#btnEnviar{
+  background: linear-gradient(180deg, #F22797 0%, #2E62A6 100%);
+  border-radius: 10vw;
+  border-style: none;
+  width: 50%;
+  align-self: center;
+  height: 5vh;
+  font-family: 'Righteous', cursive;
+  color: #FFFFFF;
+  font-size: 3.5vw;
 }
 
 #btnRecargar {
-   font-size: 4vw;
+  font-size: 4vw;
 }
 
+#game-over{
+  color: #FFFFFF;
+  grid-column: 1/5;
+  grid-row-start: 3;
+  display: flex;
+  flex-direction: row;
+}
+
+#game-over p{
+  text-align: center;
+  align-self: center;
+  justify-self: center;
+  width: 100%;
+  border-bottom: none;
+}
 /* media queries */
 
-@media (min-width: 768px) {
-   .main-container {
-      grid-template-columns: repeat(12, 1fr);
-      grid-gap: 16px;
-   }
+@media  (min-width: 768px){
+.main-container{
+  grid-template-columns: repeat(12,1fr);
+  grid-gap: 16px;
+}
 
-   .draw {
-      grid-column: 3/6;
-   }
+.draw{
+  grid-column: 2/7;
+}
 
-   .state {
-      grid-column: 8/12;
-      grid-row-start: 2;
-      align-self: flex-end;
-   }
+.draw__imagen{
+  width: 100%;
+}
 
-   p {
-      padding-bottom: 0px;
-   }
-   .nav {
-      grid-column-start: 12;
-   }
-   #btnRecargar {
-      font-size: 3vw;
-   }
-   .data {
-      grid-column: 6/8;
-   }
-   #btnEnviar {
-      width: 70%;
-      font-size: 2vw;
-      height: auto;
-   }
-   .title {
-      grid-column: 6/8;
-   }
+.state{
+  grid-column: 8/12;
+  grid-row-start: 2;
+  align-self: flex-end;
+}
+
+p{
+   padding-bottom: 0px;
+
+}
+.nav{
+  grid-column-start: 12;
+}
+#btnRecargar {
+  font-size: 3vw;
+}
+.data{
+  grid-column: 6/8;
+}
+#btnEnviar{
+  width: 70%;
+  font-size: 2vw;
+  height: auto;
+}
+.title{
+  grid-column: 6/8;
+}
 }

@@ -1,48 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="css/style.css">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" 
+      crossorigin="anonymous"/>
 
    <title>Ahorcado</title>
 </head>
-
 <body>
-   <div class="main-container">
-      <div class="title">
-         <h1>El Ahorcado</h1>
-      </div>
-      <nav class="nav">
-         <label id="btnRecargar"><i class="fas fa-redo-alt"></i></label>
-      </nav>
-      <section class="state">
-         <p id="output"></p>
-      </section>
-
-      <section class="draw">
-         <img class="draw__imagen draw__imagen--1" src="img/gallow.svg" alt="">
-         <img class="draw__imagen draw__imagen--2" src="img/head.svg" alt="">
-         <img class="draw__imagen draw__imagen--3" src="img/head-body.svg" alt="">
-         <img class="draw__imagen draw__imagen--4" src="img/head-body-one-arm.svg" alt="">
-         <img class="draw__imagen draw__imagen--5" src="img/head-body-arm.svg" alt="">
-         <img class="draw__imagen draw__imagen--6" src="img/head-body-one-leg.svg" alt="">
-         <img class="draw__imagen draw__imagen--7" src="img/game-over.svg" alt="">
-      </section>
-      <section class="data">
-         <input type="text" maxlength="1" id="inpEntrada" placeholder="Ingresa una letra"
-            onkeypress="return SoloLetras(event);" required>
-         <button id="btnEnviar">evaluar</button>
-      </section>
-   </div>
+ <div class="main-container">
+    <div class="title">
+      <h1>El Ahorcado</h1>
+    </div>
+    <nav class="nav">
+    <label id="btnRecargar"><i class="fas fa-redo-alt"></i></label>
+   </nav>
+   <section class="state">
+     <p id="output"></p>
+   </section>
+   
+   <section class="draw">
+      <img class="draw__imagen draw__imagen--1" src="img/gallow.svg" alt="">
+      <img class="draw__imagen draw__imagen--2" src="img/head.svg" alt="">
+      <img class="draw__imagen draw__imagen--3" src="img/head-body.svg" alt="">
+      <img class="draw__imagen draw__imagen--4" src="img/head-body-one-arm.svg" alt="">
+      <img class="draw__imagen draw__imagen--5" src="img/head-body-arm.svg" alt="">
+      <img class="draw__imagen draw__imagen--6" src="img/head-body-one-leg.svg" alt="">
+      <img class="draw__imagen draw__imagen--7" src="img/game-over.svg" alt="">
+   </section>
+   <section class="data">
+      <input type="text" maxlength="1" id="inpEntrada" pattern="Ingresa una letra">
+      <button id= "btnEnviar">evaluar</button>
+   </section>
+   <div id="game-over"></div>
+  </div>
    <script src="js/main.js"></script>
 </body>
-
 </html>
