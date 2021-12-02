@@ -41,6 +41,7 @@ btnCancelar.addEventListener('click', () => {                                   
 console.log(word);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 btnCalcular.addEventListener('click', () => {
    let letra = document.querySelector('#inpEntrada').value.toLowerCase();
@@ -77,6 +78,8 @@ function SoloLetras(e) {                                                        
 }
 =======
 >>>>>>> a3adabe (Vuelta a commit andres)
+=======
+>>>>>>> main
 
 btnCalcular.addEventListener('click', () => {
    let letra = document.querySelector('#inpEntrada').value.toLowerCase();
@@ -91,6 +94,7 @@ btnCalcular.addEventListener('click', () => {
          puntajeGanar++;
          aux = true;
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       if (puntajeGanar == word.length) {                                   //contador para ganar el juego
@@ -114,6 +118,8 @@ btnCalcular.addEventListener('click', () => {
 >>>>>>> 26fe8b0d372b77e8a62f00e04c32afd0032148d6
 =======
 >>>>>>> a3adabe (Vuelta a commit andres)
+=======
+>>>>>>> main
    }
 
    if (puntajeGanar == word.length) {
